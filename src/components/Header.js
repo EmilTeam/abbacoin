@@ -29,10 +29,10 @@ const Header = () => {
                     </div>
 
                     <ul className={toggleMenu ? "nav active" : "nav"}>
-                        <li><a href='#one' className="active">Menu</a></li>
-                        <li><a href='#two'>About us</a></li>
-                        <li><a href='#three'>Whitepaper</a></li>
-                        <li><a href='https://pancakeswap.finance/info/token/0xe0ed96187ad3bB862E6616Cb7Cf04ba541309F5e' className="btn c-red br-30">Buy now</a></li>
+                        <li><a  onClick={MenuToggleSwitch}  href='#one'>Home</a></li>
+                        <li><a  onClick={MenuToggleSwitch}  href='#two'>About us</a></li>
+                        <li><a  onClick={MenuToggleSwitch}  href='#three'>Whitepaper</a></li>
+                        <li><a  onClick={MenuToggleSwitch}  href='https://pancakeswap.finance/info/token/0xe0ed96187ad3bB862E6616Cb7Cf04ba541309F5e' className="btn c-red br-30">Buy now</a></li>
                     </ul>
                 </div>
             </nav>
