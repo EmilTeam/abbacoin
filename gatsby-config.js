@@ -27,8 +27,7 @@ module.exports = {
         name: `assets`,
         path: `${__dirname}/src/assets/`,
       },
-    },
-
+    }
 
 
   ],

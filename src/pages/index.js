@@ -36,7 +36,7 @@ const IndexPage = () => {
                     </div>
                 </div>
             </div>
-            <StaticImage src="../assets/body/luz.png" alt="luz" placeholder="blurred"   className="luz" imagClassName="luz"/>
+            <StaticImage src="../assets/body/luz.png" alt="luz" placeholder="blurred"   className="luz" imgClassName="luz"/>
         </section>
 
         <section className="rel p-10">
@@ -55,7 +55,7 @@ const IndexPage = () => {
                             </ul>
                         </div>
                     </div>
-                    <img className="block-box-full--img"   src={ventajas}/>
+                    <img className="block-box-full--img" alt="ventajas"   src={ventajas}/>
                 </div>
             </div>
             <div className="cuadro"></div>
@@ -74,7 +74,7 @@ const IndexPage = () => {
                     </div>
 
                     <div className="block-box right">
-                        <StaticImage imgclassName="block-box--img img" alt="chart"  placeholder="blurred" src="../assets/body/abbacoin_pastel.svg" />
+                        <StaticImage imgClassName="block-box--img img" alt="chart"  placeholder="blurred" src="../assets/body/abbacoin_pastel.svg" />
                         <div className="wrapper">
                             <h2 className="h3">Harness the potential ABBACoin.</h2>
                             <p>Cryptocurrencies have become an increasingly popular investment and financial transaction tool in the decentralized finance (DeFi) sector.</p>
@@ -95,8 +95,8 @@ const IndexPage = () => {
                             <li><a href="https://www.tiktok.com/@abbacoin?Linkedin" className="share-tik-tok bg-color" target="_blank"  rel="noreferrer"><span>tiktok</span></a></li>
                             <li><a href="https://www.facebook.com/profile.php?id=100076395190692" className="share-facebook bg-color" target="_blank"  rel="noreferrer"><span>Facebook</span></a></li>
                             <li><a href="https://www.youtube.com/channel/UCbcHQHPfPV44azvDr5h1Z3g" className="share-youtube bg-color" target="_blank"  rel="noreferrer"><span>Youtube</span></a></li>
-                            <li><a href="https://www.linkedin.com/company/abbacoin/about/" className="share-linkedin bg-color" target="_blank"  rel="noreferrer"></a><span>Linkedin</span></li>
-                            <li><a href="https://www.reddit.com/user/abbacoin" className="share-reddit bg-color" target="_blank"  rel="noreferrer"></a><span>reddit</span></li>
+                            <li><a href="https://www.linkedin.com/company/abbacoin/about/" className="share-linkedin bg-color" target="_blank"  rel="noreferrer"><span>Linkedin</span></a></li>
+                            <li><a href="https://www.reddit.com/user/abbacoin" className="share-reddit bg-color" target="_blank"  rel="noreferrer"><span>reddit</span></a></li>
                             <li><a href="https://www.instagram.com/abbacoin_abc/" className="share-instagram bg-color" target="_blank"  rel="noreferrer"><span>instagram</span></a></li>
                         </ul>
                     </div>
