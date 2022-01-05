@@ -1,4 +1,4 @@
-import "./src/css/global.css"
+//import "./src/css/global.css"
 import "./src/css/body/main.css"
 import "./src/css/body/reset.css"
 import "./src/css/body/root.css"

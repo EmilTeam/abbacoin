@@ -4,7 +4,7 @@
 
 nav{
   display: block;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   background: var(--color-dark);
 
@@ -198,5 +198,3 @@ nav,
   -ms-transition:all 350ms ease;
   transition:all 350ms ease;
 }
-
-
