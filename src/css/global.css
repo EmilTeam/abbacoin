@@ -1,12 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-   html{
+html{
     scroll-behavior: smooth;
    }
-   body{
-       @apply font-body overflow-x-hidden font-extralight;
+
+   .d-none{
+       display: none;
    }
-  }

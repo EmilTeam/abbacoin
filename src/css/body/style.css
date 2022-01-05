@@ -187,6 +187,10 @@
   cursor: pointer;
 }
 
+.social-share span{
+	display: none;
+}
+
 .social-share a.share-facebook.bg-color{background-color:  #2d609b;}
 .social-share a.share-twitter.bg-color{background-color:   #00c3f3;}
 .social-share a.share-tik-tok.bg-color{background-color:   #000000;}

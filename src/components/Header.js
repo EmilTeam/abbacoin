@@ -15,14 +15,14 @@ const Header = () => {
             <nav>
                 <div className="navigation">
                     <div className="logo-wrapper">
-                        <a href="./" className="logo"><img src={logo}/></a>
-                        <div className="language hidde">
+                        <a href="./" className="logo"><img alt='logo' src={logo}/></a>
+                        <div className="language d-none">
                             <a href='?language=spanish' >Esp</a>
                             <a href='?language=english' >Eng</a>
                         </div>
                     </div>
 
-                    <div className="hamburguer" onClick={MenuToggleSwitch} onKeyDown={MenuToggleSwitch}>
+                    <div role="button" tabIndex="-1" className="hamburguer" onClick={MenuToggleSwitch} onKeyDown={MenuToggleSwitch}>
                         <span></span>
                         <span></span>
                         <span></span>
