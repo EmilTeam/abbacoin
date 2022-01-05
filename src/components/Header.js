@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StaticImage } from "gatsby-plugin-image"
+import logo from "../assets/logo/logo.svg"
 
 const Header = () => {
 
@@ -15,8 +15,8 @@ const Header = () => {
             <nav>
                 <div className="navigation">
                     <div className="logo-wrapper">
-                        <a href="./" className="logo"><StaticImage src="../assets/logo/logo.svg"></StaticImage></a>
-                        <div className="language">
+                        <a href="./" className="logo"><img src={logo}/></a>
+                        <div className="language hidde">
                             <a href='?language=spanish' >Esp</a>
                             <a href='?language=english' >Eng</a>
                         </div>
