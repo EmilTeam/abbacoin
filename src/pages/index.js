@@ -1,12 +1,20 @@
 import * as React from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
-import ventajas from "../assets/body/ventajas.jpeg"
+
+import Helmet from "react-helmet"
 
 // markup
 const IndexPage = () => {
   return (
     <Layout >
+      <Helmet>
+          <meta name="description" content="A unique ecosystem. Enjoy a distributed system of technological services, which eliminates the disadvantages of the current market, and allows transfers in an agile, reliable and solidly supported manner." />
+          <meta name="keywords" content="Abbacoin, crypto, cryptocurrency, cryptomonedas" />
+          <meta name="autor" content="Disruptive Studio" />
+          <title>Abbacoin</title>
+      </Helmet>
+
        <main id="page-content">
         <section id="one" className="rel c-grad-violet">
             <div className="h-100vh d-flex ai-center">
@@ -36,7 +44,7 @@ const IndexPage = () => {
                     </div>
                 </div>
             </div>
-            <StaticImage src="../assets/body/luz.png" alt="luz" placeholder="blurred"   className="luz" imgClassName="luz"/>
+            <StaticImage style={{width:"100%"}} src="../assets/body/luz.png" alt="luz" placeholder="blurred"  className="luz"/>
         </section>
 
         <section className="rel p-10">
@@ -55,7 +63,7 @@ const IndexPage = () => {
                             </ul>
                         </div>
                     </div>
-                    <img className="block-box-full--img" alt="ventajas"   src={ventajas}/>
+                    <StaticImage style={{position:"absolute"}} className="block-box-full--img" imgClassName="block-box-full--img"	layout="fullWidth"  alt="ventajas"   src="../assets/body/ventajas.jpeg"/>
                 </div>
             </div>
             <div className="cuadro"></div>

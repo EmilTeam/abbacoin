@@ -22,7 +22,7 @@ const Header = () => {
                         </div>
                     </div>
 
-                    <div role="button" tabIndex="-1" className="hamburguer" onClick={MenuToggleSwitch} onKeyDown={MenuToggleSwitch}>
+                    <div role="button" tabIndex="-1" aria-label="Menu" className="hamburguer" onClick={MenuToggleSwitch} onKeyDown={MenuToggleSwitch}>
                         <span></span>
                         <span></span>
                         <span></span>
