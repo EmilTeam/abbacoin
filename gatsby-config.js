@@ -5,12 +5,11 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
 
-
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [require(`tailwindcss`)],
-      },
+      }
     },
     {
       resolve: `gatsby-plugin-purgecss`,
@@ -18,7 +17,7 @@ module.exports = {
         printRejected: true,
         develop: false,
         tailwind:true,
-      },
+      }
     },
 
     {
@@ -26,9 +25,9 @@ module.exports = {
       options: {
         name: `assets`,
         path: `${__dirname}/src/assets/`,
-      },
+      }
     }
 
 
-  ],
+  ]
 }

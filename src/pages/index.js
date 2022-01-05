@@ -1,7 +1,7 @@
 import * as React from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
-
+import  favicon from "../assets/favicon/favicon.ico"
 import Helmet from "react-helmet"
 
 // markup
@@ -12,6 +12,7 @@ const IndexPage = () => {
           <meta name="description" content="A unique ecosystem. Enjoy a distributed system of technological services, which eliminates the disadvantages of the current market, and allows transfers in an agile, reliable and solidly supported manner." />
           <meta name="keywords" content="Abbacoin, crypto, cryptocurrency, cryptomonedas" />
           <meta name="autor" content="Disruptive Studio" />
+          <link rel="shortcut icon" href={ favicon } />
           <title>Abbacoin</title>
       </Helmet>
 
