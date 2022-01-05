@@ -1,183 +1,118 @@
 import * as React from "react"
+import Layout from "../components/Layout"
+import { StaticImage } from "gatsby-plugin-image"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
 
 // markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
+    <Layout >
+       <main id="page-content">
+        <section id="one" className="rel c-grad-violet">
+            <div className="h-100vh d-flex ai-center">
+                <div className="content">
+                    <div className="block-box right p-20-30">
+                        <StaticImage className="block-box--img" src="../assets/body/abacoin_crypto.svg" />
+                        <div className="wrapper">
+                            <h1 className="h1 tc-white">Conqer the World with <span className='tc-red'>ABBACoin</span></h1>
+                            <p className="h3 tc-white">Reduce costs and streamline your transactions securely in real time.</p>
+                            <div className="navigation_body">
+                                <a href="#two" className="btn outline red br-30">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="h-50vh d-flex ai-center bg-map">
+                <div className="content">
+                    <div className="w-60 med-w-80 small-w-100 m-center">
+                        <div className="d-flex jc-between ai-center fw-wrap">
+                            <StaticImage src="../assets/body/ecosistema.svg" className="p-20-30 w-30 small-w-40 small-m-center" />
+                            <div className="p-20-30 w-70 small-w-100 tc-white">
+                                <h4 className="h3 small-t-center">A unique ecosystem</h4>
+                                <p className="small-t-center">Enjoy a distributed system of technological services, which eliminates the disadvantages of the current market, and allows transfers in an agile, reliable and solidly supported manner.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <StaticImage src="../assets/body/luz.png" layout="fixed" className="luz" imageClassName="luz"/>
+        </section>
+
+        <section className="rel p-10">
+            <div className="content br-20">
+                <div className="h-50vh d-flex ai-center">
+                    <div className="w-50 small-w-100 p-20-30 tc-white box">
+                        <h3 className="h1">One ecosystem, multiple advantages:</h3>
+                        <div className="menu-list item">
+                            <ul className="menu-list--ul">
+                                <li className="menu-list--item">Powered by Binance Smart Chain</li>
+                                <li className="menu-list--item">Speeds up the transaction process by 5 seconds</li>
+                                <li className="menu-list--item">It has its own cryptoasset</li>
+                                <li className="menu-list--item">Eliminates the bureaucracy of the traditional banking model</li>
+                                <li className="menu-list--item">Incorruptible</li>
+                                <li className="menu-list--item">Transfers internationally</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <StaticImage className="block-box-full--img" src="../assets/body/ventajas.jpeg" />
+                </div>
+            </div>
+            <div className="cuadro"></div>
+        </section>
+
+        <section id="two">
+            <div className="block-content">
+                <div className="m-center w-80 med-w-90 small-w-100">
+                    <div className="block-box">
+                        <StaticImage className="block-box--img img" src="../assets/body/abbacoin_finance.svg" />
+                        <div className="wrapper">
+                            <h2 className="h3">Committed to you down to the last detail</h2>
+                            <p>ABBACoin is distributed on a variable basis for better performance right from the start, thus ensuring your liquidity.</p>
+                            <a href="https://pancakeswap.finance/info/token/0xe0ed96187ad3bB862E6616Cb7Cf04ba541309F5e" className="btn c-red br-30">Buy now</a>
+                        </div>
+                    </div>
+
+                    <div className="block-box right">
+                        <StaticImage imgClassName="block-box--img img" src="../assets/body/abbacoin_pastel.svg" />
+                        <div className="wrapper">
+                            <h2 className="h3">Harness the potential ABBACoin.</h2>
+                            <p>Cryptocurrencies have become an increasingly popular investment and financial transaction tool in the decentralized finance (DeFi) sector.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="three" className="c-violet tc-white">
+            <div className="block-content">
+                <div className="m-center w-70 t-center small-w-100">
+                    <h4 className="h2 m-10">Just in 2020, the crypto market grew <span className='tc-red'>300%</span>.</h4>
+                    <p className="h4 m-10">Reap the benefits of the Crypto revolution! Join the ABC's of the market of the future, today. <span className='tc-red'>Bet on ABBACoin.</span></p>
+                    <div className="social-share">
+                        <ul>
+                            <li><a href="https://twitter.com/abc_abbacoinInstagram" className="share-twitter bg-color" target="_blank"></a></li>
+                            <li><a href="https://www.tiktok.com/@abbacoin?Linkedin" className="share-tik-tok bg-color" target="_blank"></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100076395190692" className="share-facebook bg-color" target="_blank"></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCbcHQHPfPV44azvDr5h1Z3g" className="share-youtube bg-color" target="_blank"></a></li>
+                            <li><a href="https://www.linkedin.com/company/abbacoin/about/" className="share-linkedin bg-color" target="_blank"></a></li>
+                            <li><a href="https://www.reddit.com/user/abbacoin" className="share-reddit bg-color" target="_blank"></a></li>
+                            <li><a href="https://www.instagram.com/abbacoin_abc/" className="share-instagram bg-color" target="_blank"></a></li>
+                        </ul>
+                    </div>
+                    <div className="w-100 d-flex jc-center">
+                        <a href="./whitepaper/eng.pdf" className="btn c-red m-10 br-30 icon download">Whitepaper</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+
+
+
+    </Layout>
   )
 }
 
