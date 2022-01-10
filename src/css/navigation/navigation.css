@@ -109,10 +109,14 @@ nav{
   display: inline-block;
   margin: 0 10px;
   color: var(--color-pearl);
+  text-transform: uppercase;
 }
 
 .language a:hover{
   color: white;
+}
+.language a[aria-current="page"]{
+  color: var(--color-red);
 }
 
 /* ============================================== */

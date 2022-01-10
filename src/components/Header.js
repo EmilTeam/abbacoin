@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import logo from "../assets/logo/logo.svg"
-
+import {Link, useI18next} from 'gatsby-plugin-react-i18next';
+import { useTranslation } from "react-i18next"
 const Header = () => {
-
+    const {languages, originalPath} = useI18next();
+    const {t} = useTranslation();
     const[toggleMenu, setToggleMenu] = useState(false);
 
     const MenuToggleSwitch = () => {
@@ -16,9 +18,12 @@ const Header = () => {
                 <div className="navigation">
                     <div className="logo-wrapper">
                         <a href="./" className="logo"><img alt='logo' src={logo}/></a>
-                        <div className="language d-none">
-                            <a href='?language=spanish' >Esp</a>
-                            <a href='?language=english' >Eng</a>
+                        <div className="language">
+                            {languages.map((lng) => (
+                                <Link to={originalPath} language={lng}>
+                                {lng}
+                                </Link>
+                            ))}
                         </div>
                     </div>
 
@@ -29,10 +34,10 @@ const Header = () => {
                     </div>
 
                     <ul className={toggleMenu ? "nav active" : "nav"}>
-                        <li><a  onClick={MenuToggleSwitch}  href='#one'>Home</a></li>
-                        <li><a  onClick={MenuToggleSwitch}  href='#two'>About us</a></li>
+                        <li><a  onClick={MenuToggleSwitch}  href='#one'>{t("Menu_Home")}</a></li>
+                        <li><a  onClick={MenuToggleSwitch}  href='#two'>{t("Menu_About")}</a></li>
                         <li><a  onClick={MenuToggleSwitch}  href='#three'>Whitepaper</a></li>
-                        <li><a  onClick={MenuToggleSwitch}  href='https://pancakeswap.finance/info/token/0xe0ed96187ad3bB862E6616Cb7Cf04ba541309F5e' className="btn c-red br-30">Buy now</a></li>
+                        <li><a  onClick={MenuToggleSwitch}  href='https://pancakeswap.finance/info/token/0xe0ed96187ad3bB862E6616Cb7Cf04ba541309F5e' className="btn c-red br-30">{t("Btn_Buy")}</a></li>
                     </ul>
                 </div>
             </nav>
