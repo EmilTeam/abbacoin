@@ -27,10 +27,19 @@ const IndexPage = () => {
                     <div className="block-box right p-20-30">
                         <StaticImage className="block-box--img"  alt="abbacoin crypto" placeholder="blurred" src="../assets/body/abacoin_crypto.svg" />
                         <div className="wrapper">
-                            <h1 className="h1 tc-white">Conquer the World with <span className='tc-red'>ABBACoin</span></h1>
-                            <p className="h3 tc-white">Reduce costs and streamline your transactions securely in real time.</p>
+                            <h1 className="h1 tc-white">
+                                 <div dangerouslySetInnerHTML={
+                                    {__html: t('Hero_1', {interpolation: {escapeValue: false}})}
+                                } />
+                            </h1>
+                            <p className="h3 tc-white">
+                                <div dangerouslySetInnerHTML={
+                                    {__html: t('Hero_2', {interpolation: {escapeValue: false}})}
+                                } />
+                            </p>
+
                             <div className="navigation_body">
-                                <a href="#two" className="btn outline red br-30">Learn more</a>
+                                <a href="#two" className="btn outline red br-30">{t("Btn_Read")}</a>
                             </div>
                         </div>
                     </div>
@@ -42,8 +51,8 @@ const IndexPage = () => {
                         <div className="d-flex jc-between ai-center fw-wrap">
                             <StaticImage src="../assets/body/ecosistema.svg" alt="ecosistema" placeholder="blurred" className="p-20-30 w-30 small-w-40 small-m-center" />
                             <div className="p-20-30 w-70 small-w-100 tc-white">
-                                <h4 className="h3 small-t-center">A unique ecosystem</h4>
-                                <p className="small-t-center">Enjoy a distributed system of technological services, which eliminates the disadvantages of the current market, and allows transfers in an agile, reliable and solidly supported manner.</p>
+                                <h4 className="h3 small-t-center">{t("Eco_1")}</h4>
+                                <p className="small-t-center">{t("Eco_2")}</p>
                             </div>
                         </div>
                     </div>
@@ -56,15 +65,15 @@ const IndexPage = () => {
             <div className="content br-20">
                 <div className="h-50vh d-flex ai-center">
                     <div className="w-50 small-w-100 p-20-30 tc-white box">
-                        <h3 className="h1">One ecosystem, multiple advantages:</h3>
+                        <h3 className="h1">{t("Mul_1")}</h3>
                         <div className="menu-list item">
                             <ul className="menu-list--ul">
-                                <li className="menu-list--item">Powered by Binance Smart Chain</li>
-                                <li className="menu-list--item">Speeds up the transaction process by 5 seconds</li>
-                                <li className="menu-list--item">It has its own cryptoasset</li>
-                                <li className="menu-list--item">Eliminates the bureaucracy of the traditional banking model</li>
-                                <li className="menu-list--item">Incorruptible</li>
-                                <li className="menu-list--item">Transfers internationally</li>
+                                <li className="menu-list--item">{t("Mul_2")}</li>
+                                <li className="menu-list--item">{t("Mul_3")}</li>
+                                <li className="menu-list--item">{t("Mul_4")}</li>
+                                <li className="menu-list--item">{t("Mul_5")}</li>
+                                <li className="menu-list--item">{t("Mul_6")}</li>
+                                <li className="menu-list--item">{t("Mul_7")}</li>
                             </ul>
                         </div>
                     </div>
@@ -80,17 +89,17 @@ const IndexPage = () => {
                     <div className="block-box">
                         <StaticImage className="block-box--img img" alt="finance"  placeholder="blurred" src="../assets/body/abbacoin_finance.svg" />
                         <div className="wrapper">
-                            <h2 className="h3">Committed to you down to the last detail</h2>
-                            <p>ABBACoin is distributed on a variable basis for better performance right from the start, thus ensuring your liquidity.</p>
-                            <a href="https://pancakeswap.finance/info/token/0xe0ed96187ad3bB862E6616Cb7Cf04ba541309F5e" className="btn c-red br-30">Buy now</a>
+                            <h2 className="h3">{t("Com_1")}</h2>
+                            <p>{t("Com_2")}</p>
+                            <a href="https://pancakeswap.finance/info/token/0xe0ed96187ad3bB862E6616Cb7Cf04ba541309F5e" className="btn c-red br-30">{t("Btn_Buy")}</a>
                         </div>
                     </div>
 
                     <div className="block-box right">
                         <StaticImage imgClassName="block-box--img img" alt="chart"  placeholder="blurred" src="../assets/body/abbacoin_pastel.svg" />
                         <div className="wrapper">
-                            <h2 className="h3">Harness the potential ABBACoin.</h2>
-                            <p>Cryptocurrencies have become an increasingly popular investment and financial transaction tool in the decentralized finance (DeFi) sector.</p>
+                            <h2 className="h3">{t("Apr_1")}</h2>
+                            <p>{t("Apr_2")}</p>
                         </div>
                     </div>
                 </div>
@@ -100,8 +109,16 @@ const IndexPage = () => {
         <section id="three" className="c-violet tc-white">
             <div className="block-content">
                 <div className="m-center w-70 t-center small-w-100">
-                    <h4 className="h2 m-10">Just in 2020, the crypto market grew <span className='tc-red'>300%</span>.</h4>
-                    <p className="h4 m-10">Reap the benefits of the Crypto revolution! Join the ABC's of the market of the future, today. <span className='tc-red'>Bet on ABBACoin.</span></p>
+                    <h4 className="h2 m-10">
+                        <div dangerouslySetInnerHTML={
+                            {__html: t('Ben_1', {interpolation: {escapeValue: false}})}
+                        } />
+                    </h4>
+                    <p className="h4 m-10">
+                        <div dangerouslySetInnerHTML={
+                            {__html: t('Ben_2', {interpolation: {escapeValue: false}})}
+                        } />
+                    </p>
                     <div className="social-share">
                         <ul>
                             <li><a href="https://twitter.com/abc_abbacoinInstagram" className="share-twitter bg-color" target="_blank" rel="noreferrer"> <span>Twitter</span> </a></li>
