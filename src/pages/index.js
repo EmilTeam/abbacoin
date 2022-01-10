@@ -3,9 +3,12 @@ import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import  favicon from "../assets/favicon/favicon.ico"
 import Helmet from "react-helmet"
+import { graphql } from "gatsby"
+import { useTranslation } from "react-i18next"
 
 // markup
 const IndexPage = () => {
+    const {t} = useTranslation();
   return (
     <Layout >
       <Helmet>
@@ -17,6 +20,7 @@ const IndexPage = () => {
       </Helmet>
 
        <main id="page-content">
+
         <section id="one" className="rel c-grad-violet">
             <div className="h-100vh d-flex ai-center">
                 <div className="content">
@@ -126,3 +130,18 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

@@ -20,13 +20,16 @@
     "gatsby-plugin-favicons": "^2.0.0",
     "gatsby-plugin-image": "^1.14.0",
     "gatsby-plugin-purgecss": "^6.0.2",
+    "gatsby-plugin-react-i18next": "^1.2.2",
     "gatsby-plugin-sharp": "^3.14.0",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-transformer-sharp": "^3.14.0",
+    "i18next": "^21.6.5",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^11.15.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
