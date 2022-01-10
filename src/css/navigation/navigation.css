@@ -115,8 +115,8 @@ nav{
 .language a:hover{
   color: white;
 }
-.language a[aria-current="page"]{
-  color: var(--color-red);
+[aria-current="page"]{
+  color: var(--color-red)!important;
 }
 
 /* ============================================== */
