@@ -116,7 +116,7 @@ nav{
   color: white;
 }
 [aria-current="page"]{
-  color: var(--color-red)!important;
+  color: "#EA574E"!important;
 }
 
 /* ============================================== */
