@@ -21,7 +21,7 @@ const IndexPage = () => {
             <div className="h-100vh d-flex ai-center">
                 <div className="content">
                     <div className="block-box right p-20-30">
-                        <StaticImage className="block-box--img" alt="abbacoin crypto" placeholder="blurred" src="../assets/body/abacoin_crypto.svg" />
+                        <StaticImage className="block-box--img"  alt="abbacoin crypto" placeholder="blurred" src="../assets/body/abacoin_crypto.svg" />
                         <div className="wrapper">
                             <h1 className="h1 tc-white">Conquer the World with <span className='tc-red'>ABBACoin</span></h1>
                             <p className="h3 tc-white">Reduce costs and streamline your transactions securely in real time.</p>
@@ -45,7 +45,7 @@ const IndexPage = () => {
                     </div>
                 </div>
             </div>
-            <StaticImage style={{width:"100%"}} src="../assets/body/luz.png" alt="luz" placeholder="blurred"  className="luz"/>
+            <StaticImage style={{width:"100%", overflow:'visible'}} src="../assets/body/luz.png" alt="luz" placeholder="blurred"  className="luz"/>
         </section>
 
         <section className="rel p-10">
