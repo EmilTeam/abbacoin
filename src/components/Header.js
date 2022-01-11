@@ -37,7 +37,7 @@ const Header = () => {
                         <li><a  onClick={MenuToggleSwitch}  href='#one'>{t("Menu_Home")}</a></li>
                         <li><a  onClick={MenuToggleSwitch}  href='#two'>{t("Menu_About")}</a></li>
                         <li><a  onClick={MenuToggleSwitch}  href='#three'>Whitepaper</a></li>
-                        <li><a  onClick={MenuToggleSwitch}  href='https://pancakeswap.finance/info/token/0xe0ed96187ad3bB862E6616Cb7Cf04ba541309F5e' className="btn c-red br-30">{t("Btn_Buy")}</a></li>
+                        <li><a  onClick={MenuToggleSwitch}  href='https://pancakeswap.finance/info/token/0xe0ed96187ad3bB862E6616Cb7Cf04ba541309F5e' target="_blank"  rel="noreferrer" className="btn c-red br-30">{t("Btn_Buy")}</a></li>
                     </ul>
                 </div>
             </nav>

@@ -5,10 +5,16 @@ import  favicon from "../assets/favicon/favicon.ico"
 import Helmet from "react-helmet"
 import { graphql } from "gatsby"
 import { useTranslation } from "react-i18next"
+import whitePaperEng from "../downloads/whitepapers/Eng.pdf"
+import whitePaperEs from "../downloads/whitepapers/Esp.pdf"
 
 // markup
 const IndexPage = () => {
-    const {t} = useTranslation();
+    const {t,i18n} = useTranslation();
+    const {language} = i18n ;
+
+
+
   return (
     <Layout >
       <Helmet>
@@ -129,7 +135,7 @@ const IndexPage = () => {
                         </ul>
                     </div>
                     <div className="w-100 d-flex jc-center">
-                        <a href="./whitepaper/eng.pdf" className="btn c-red m-10 br-30 icon download">Whitepaper</a>
+                        <a href={language === "en" ? whitePaperEng : whitePaperEs} target="_blank" rel="noreferrer"  className="btn c-red m-10 br-30 icon download">Whitepaper</a>
                     </div>
                 </div>
             </div>
