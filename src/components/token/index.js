@@ -53,6 +53,7 @@ background-color:#1a1b1c;
 padding:12px 32px;
 border-radius:5px;
 display:inline-block;
+margin-top:15px;
 
 & .token-name{
   display:flex;
