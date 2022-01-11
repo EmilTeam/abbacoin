@@ -109,15 +109,13 @@ const IndexPage = () => {
         <section id="three" className="c-violet tc-white">
             <div className="block-content">
                 <div className="m-center w-70 t-center small-w-100">
-                    <h4 className="h2 m-10">
-                        <div dangerouslySetInnerHTML={
+                    <h4 className="h2 m-10" dangerouslySetInnerHTML={
                             {__html: t('Ben_1', {interpolation: {escapeValue: false}})}
-                        } />
+                        } >
                     </h4>
-                    <p className="h4 m-10">
-                        <div dangerouslySetInnerHTML={
+                    <p className="h4 m-10" dangerouslySetInnerHTML={
                             {__html: t('Ben_2', {interpolation: {escapeValue: false}})}
-                        } />
+                        }>
                     </p>
                     <div className="social-share">
                         <ul>
