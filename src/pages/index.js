@@ -7,7 +7,7 @@ import { graphql } from "gatsby"
 import { useTranslation } from "react-i18next"
 import whitePaperEng from "../downloads/whitepapers/Eng.pdf"
 import whitePaperEs from "../downloads/whitepapers/Esp.pdf"
-
+import Token from "../components/token"
 // markup
 const IndexPage = () => {
     const {t,i18n} = useTranslation();
@@ -28,7 +28,7 @@ const IndexPage = () => {
        <main id="page-content">
 
         <section id="one" className="rel c-grad-violet">
-            <div className="h-100vh d-flex ai-center">
+            <div className="h-100vh d-flex ai-center" style={{position: "relative", zIndex:"20"}}>
                 <div className="content">
                     <div className="block-box right p-20-30">
                         <StaticImage className="block-box--img"  alt="abbacoin crypto" placeholder="blurred" src="../assets/body/abacoin_crypto.svg" />
@@ -38,15 +38,17 @@ const IndexPage = () => {
                                     {__html: t('Hero_1', {interpolation: {escapeValue: false}})}
                                 } />
                             </h1>
-                            <p className="h3 tc-white">
+                            <p className="h4 tc-white">
                                 <div dangerouslySetInnerHTML={
                                     {__html: t('Hero_2', {interpolation: {escapeValue: false}})}
                                 } />
                             </p>
 
-                            <div className="navigation_body">
+                            {/* <div className="navigation_body">
                                 <a href="#two" className="btn outline red br-30">{t("Btn_Read")}</a>
-                            </div>
+                            </div> */}
+
+                            <Token/>
                         </div>
                     </div>
                 </div>
