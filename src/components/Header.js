@@ -20,7 +20,7 @@ const Header = () => {
                         <a href="./" className="logo"><img alt='logo' src={logo}/></a>
                         <div className="language">
                             {languages.map((lng) => (
-                                <Link to={originalPath} language={lng}>
+                                <Link to={originalPath} language={lng} key={lng}>
                                 {lng}
                                 </Link>
                             ))}

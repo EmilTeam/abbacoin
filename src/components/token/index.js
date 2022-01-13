@@ -33,11 +33,15 @@ let bnbvalue = parseFloat(token.price_BNB).toFixed(6);
         </>
         :
         <>
-         <p className="tc-white token-name"> <img src={ favicon }/> <strong>{token.name}</strong> <span>({token.symbol})</span> </p>
+        <a href="https://bscscan.com/token/0x1b2f67679798c764f2c0c69dfb6bda8b30a094cf" target="blank">
+          <p className="tc-white token-name"> <img src={ favicon }/> <strong>{token.name}</strong> <span>({token.symbol})</span> </p>
+        </a>
           <div className="token-price">
-            <h3 className="h3 tc-white"> $ {tokenvalue}</h3>
+            <h3 className="h2 tc-white"> $ {tokenvalue}</h3>
             <p className="bnb-card tiny tc-white">  { bnbvalue } <SiBinance className="icon_bnb" /> <b> BNB</b></p>
           </div>
+
+          <SmartContracts/>
         </>
         }
 
@@ -49,17 +53,17 @@ export default Axios;
 
 const CardToken = styled.div`
 background:#1a1b1c;
-padding:12px 32px;
+padding:24px 32px;
 border-radius:5px;
 
-margin-top:15px;
+margin-top:24px;
 
 & .token-name{
   display:flex;
   align-items:center;
   margin-bottom:0;
   & img{
-    display:inline-block
+    display:inline-block;
     margin-right: 15px;
     height:20px;
     width:20px;
@@ -67,6 +71,10 @@ margin-top:15px;
   }
 }
 
+& .token-price{
+  display:flex;
+  align-items:center;
+}
 
 
 .bnb-card{
