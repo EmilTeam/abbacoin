@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next"
 import whitePaperEng from "../downloads/whitepapers/Eng.pdf"
 import whitePaperEs from "../downloads/whitepapers/Esp.pdf"
 import Token from "../components/token"
+
 // markup
 const IndexPage = () => {
     const {t,i18n} = useTranslation();
@@ -38,17 +39,18 @@ const IndexPage = () => {
                                     {__html: t('Hero_1', {interpolation: {escapeValue: false}})}
                                 } />
                             </h1>
-                            <p className="h4 tc-white">
-                                <div dangerouslySetInnerHTML={
+                            <p className="h4 tc-white" dangerouslySetInnerHTML={
                                     {__html: t('Hero_2', {interpolation: {escapeValue: false}})}
                                 } />
-                            </p>
+
 
                             {/* <div className="navigation_body">
                                 <a href="#two" className="btn outline red br-30">{t("Btn_Read")}</a>
                             </div> */}
 
                             <Token/>
+
+
                         </div>
                     </div>
                 </div>
