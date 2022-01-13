@@ -3,7 +3,7 @@ import axios from "axios";
 import styled from 'styled-components'
 import { SiBinance } from 'react-icons/si';
 import favicon from "../../assets/favicon/favicon.ico"
-
+import SmartContracts from "../SmartContracts";
 
 const Axios = () => {
   const [token, setToken] = useState([]);
@@ -25,34 +25,33 @@ let tokenvalue = parseFloat(token.price).toFixed(2);
 let bnbvalue = parseFloat(token.price_BNB).toFixed(6);
 
   return (
-    <>
-
-      {loading ? "..."
-      :
       <CardToken>
+        {loading
+        ?
+        <>
+          <h5 className="h5 tc-white"> Loading ...</h5>
+        </>
+        :
+        <>
+         <p className="tc-white token-name"> <img src={ favicon }/> <strong>{token.name}</strong> <span>({token.symbol})</span> </p>
+          <div className="token-price">
+            <h3 className="h3 tc-white"> $ {tokenvalue}</h3>
+            <p className="bnb-card tiny tc-white">  { bnbvalue } <SiBinance className="icon_bnb" /> <b> BNB</b></p>
+          </div>
+        </>
+        }
 
-        <p className="tc-white token-name"> <img src={ favicon }/> <strong>{token.name}</strong> <span>({token.symbol})</span> </p>
-        <div className="token-price">
-          <h3 className="h3 tc-white"> $ {tokenvalue}</h3>
-          <p className="bnb-card tiny tc-white">  { bnbvalue } <SiBinance className="icon_bnb" /> <b> BNB</b></p>
-        </div>
-
-
-
-      </CardToken>}
-
-
-    </>
+      </CardToken>
   );
 };
 
 export default Axios;
 
 const CardToken = styled.div`
-background-color:#1a1b1c;
+background:#1a1b1c;
 padding:12px 32px;
 border-radius:5px;
-display:inline-block;
+
 margin-top:15px;
 
 & .token-name{
@@ -68,10 +67,7 @@ margin-top:15px;
   }
 }
 
-& .token-price{
-  display:flex;
-  align-items:center;
-}
+
 
 .bnb-card{
   display:flex;
