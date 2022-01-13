@@ -33,7 +33,7 @@ let bnbvalue = parseFloat(token.price_BNB).toFixed(6);
         </>
         :
         <>
-        <a href="https://bscscan.com/token/0x1b2f67679798c764f2c0c69dfb6bda8b30a094cf" target="blank">
+        <a href="https://bscscan.com/token/0xe0ed96187ad3bB862E6616Cb7Cf04ba541309F5e" target="blank">
           <p className="tc-white token-name"> <img src={ favicon }/> <strong>{token.name}</strong> <span>({token.symbol})</span> </p>
         </a>
           <div className="token-price">
