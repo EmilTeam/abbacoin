@@ -3,7 +3,8 @@ import "./index.css";
 import axios from "axios";
 import CopyAdress from './CopyAdress';
 import TokenPrice from './TokenPrice';
-import MetaMask  from "./metamask"
+import ButtonFox from "./metamask/ButtonFox"
+//import MetaMask  from "./metamask"
 export default function TokenWidget({className,contract,iconToken,theme,customBg,transparent,bgIcon, widthCard, primaryColor,linkBsc}) {
     const [token, setToken] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -87,7 +88,8 @@ export default function TokenWidget({className,contract,iconToken,theme,customBg
 
                 <div className='inputgroup-contract' >
                     <CopyAdress contract={contract}/>
-                    <MetaMask  token={token}  iconToken={iconToken} contract={contract}/>
+                    {/* <MetaMask  token={token}  iconToken={iconToken} contract={contract}/> */}
+                    <a href='https://metamask.io/download.html' target="_blank" without rel="noreferrer"><ButtonFox/> </a>
                 </div>
             </div>
             <div className='bg-token' style={{backgroundImage:`${tokenBg}`}}></div>

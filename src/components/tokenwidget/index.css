@@ -68,7 +68,8 @@
     display: flex;
 }
 .token-name .icon-token{
-    max-width: 18px;
+    width: 18px;
+    height: 18px;
     margin-right: 4px;
 }
 
