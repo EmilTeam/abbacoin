@@ -57,7 +57,7 @@ const IndexPage = () => {
                                 bgIcon="true"
                                 widthCard="100%"
                                 transparent="true"
-                                //primaryColor="#EA574E "
+                                primaryColor="#EA574E "
                                 //customBg="rgba(56, 97, 251,.5)"
                             />
 

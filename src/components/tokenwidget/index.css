@@ -94,7 +94,7 @@
 }
 .token-price .usdprice{
     font-size: clamp(24px, 2vw, 54px);
-    margin: 18px 0;
+    margin: 10px 0;
 }
 
 .cryptoprice{
@@ -282,7 +282,8 @@
   .card-token  .link-bsc{
     font-size: 14px;
     display: block;
-    padding: 15px 0;
+    padding: 0px 0;
+    text-decoration: underline;
   }
 
   .card-token.theme-light .link-bsc{
@@ -291,7 +292,7 @@
 }
 
 .card-token.theme-dark .link-bsc{
-    color: rgb(169, 169, 169);
+    color: rgb(203, 202, 202);
 }
 
 
