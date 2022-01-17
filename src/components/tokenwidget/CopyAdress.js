@@ -1,13 +1,21 @@
 import React, {useState} from 'react';
-import {CopyToClipboard} from 'react-copy-to-clipboard';
+
 export default function CopyClipboard({contract}) {
     const [copied, setCopied] = useState(false)
+
+    function greeting() {
+        setCopied(true)
+        navigator.clipboard.writeText(contract)
+      }
+
+
+
     return(
         <>
             <input className='copy-input' type="text" value={contract} readOnly="readOnly"/>
-            <CopyToClipboard text={contract}>
-                <button onClick={()=> setCopied(true)} className="copy-button"  > <CopyIcon colorIcon="#676464" /> <span>Copy to clipboard</span> </button>
-            </CopyToClipboard>
+
+                <button onClick={greeting} /* onClick={() =>  {navigator.clipboard.writeText(contract)}} */ /* onClick={()=> setCopied(true)} */ className="copy-button"  > <CopyIcon colorIcon="#676464" /> <span>Copy to clipboard</span> </button>
+
             {copied && <div className='alertcopied'>✓ Copied</div>}
         </>
     )
