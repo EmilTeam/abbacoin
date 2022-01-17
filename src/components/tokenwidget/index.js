@@ -1,7 +1,7 @@
 import React, { useState,useEffect, useRef } from 'react';
 import "./index.css";
 import axios from "axios";
-import CopyClipboard from './CopyClipboard';
+import CopyAdress from './CopyAdress';
 import TokenPrice from './TokenPrice';
 import MetaMask  from "./metamask"
 export default function TokenWidget({className,contract,iconToken,theme,customBg,transparent,bgIcon, widthCard, primaryColor,linkBsc}) {
@@ -86,7 +86,7 @@ export default function TokenWidget({className,contract,iconToken,theme,customBg
                 <TokenPrice token={token} loading={loading} contract={contract} iconToken={iconToken} primaryColor={primaryColor} linkBsc={linkBsc} />
 
                 <div className='inputgroup-contract' >
-                    <CopyClipboard contract={contract}/>
+                    <CopyAdress contract={contract}/>
                     <MetaMask  token={token}  iconToken={iconToken} contract={contract}/>
                 </div>
             </div>
