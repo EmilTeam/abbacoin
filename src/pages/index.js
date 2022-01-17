@@ -7,7 +7,7 @@ import { graphql } from "gatsby"
 import { useTranslation } from "react-i18next"
 import whitePaperEng from "../downloads/whitepapers/Eng.pdf"
 import whitePaperEs from "../downloads/whitepapers/Esp.pdf"
-import Token from "../components/token"
+import TokenWidget from "../components/tokenwidget"
 
 // markup
 const IndexPage = () => {
@@ -48,7 +48,18 @@ const IndexPage = () => {
                                 <a href="#two" className="btn outline red br-30">{t("Btn_Read")}</a>
                             </div> */}
 
-                            <Token/>
+                        <TokenWidget
+                                className="cardtokencustom"
+                                contract="0xe0ed96187ad3bB862E6616Cb7Cf04ba541309F5e"
+                                linkBsc="https://bscscan.com/token/0xe0ed96187ad3bB862E6616Cb7Cf04ba541309F5e"
+                                iconToken={favicon}
+                                theme="dark"
+                                bgIcon="true"
+                                widthCard="100%"
+                                transparent="true"
+                                //primaryColor="#EA574E "
+                                //customBg="rgba(56, 97, 251,.5)"
+                            />
 
 
                         </div>
