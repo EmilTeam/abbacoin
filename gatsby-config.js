@@ -37,7 +37,7 @@ module.exports = {
           },
           {
             matchPath: '/preview',
-            languages: ['en']
+            languages: ['es']
           }
         ]
       }
