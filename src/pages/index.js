@@ -44,11 +44,11 @@ const IndexPage = () => {
                                 } />
 
 
-                            {/* <div className="navigation_body">
+                            <div className="navigation_body">
                                 <a href="#two" className="btn outline red br-30">{t("Btn_Read")}</a>
-                            </div> */}
+                            </div>
 
-                        <TokenWidget
+                        {/* <TokenWidget
                                 className="cardtokencustom"
                                 contract="0xe0ed96187ad3bB862E6616Cb7Cf04ba541309F5e"
                                 linkBsc="https://bscscan.com/token/0xe0ed96187ad3bB862E6616Cb7Cf04ba541309F5e"
@@ -59,7 +59,7 @@ const IndexPage = () => {
                                 transparent="true"
                                 primaryColor="#EA574E "
                                 //customBg="rgba(56, 97, 251,.5)"
-                            />
+                            /> */}
 
 
                         </div>
@@ -140,7 +140,7 @@ const IndexPage = () => {
                     </p>
                     <div className="social-share">
                         <ul>
-                            <li><a href="https://twitter.com/abc_abbacoinInstagram" className="share-twitter bg-color" target="_blank" rel="noreferrer"> <span>Twitter</span> </a></li>
+                            <li><a href="https://twitter.com/abc_abbacoin" className="share-twitter bg-color" target="_blank" rel="noreferrer"> <span>Twitter</span> </a></li>
                             <li><a href="https://www.tiktok.com/@abbacoin?Linkedin" className="share-tik-tok bg-color" target="_blank"  rel="noreferrer"><span>tiktok</span></a></li>
                             <li><a href="https://www.facebook.com/profile.php?id=100076395190692" className="share-facebook bg-color" target="_blank"  rel="noreferrer"><span>Facebook</span></a></li>
                             <li><a href="https://www.youtube.com/channel/UCbcHQHPfPV44azvDr5h1Z3g" className="share-youtube bg-color" target="_blank"  rel="noreferrer"><span>Youtube</span></a></li>
